@@ -898,9 +898,10 @@ a:focus {
 }
 
 .results-carousel .item {
-  max-width: 1080px;
+  max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
 }
 
 .results-carousel .item img {
