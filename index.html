@@ -56,12 +56,10 @@
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -70,7 +68,6 @@
 
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
@@ -272,19 +269,19 @@
     <section class="section">
       <div class="container">
         <h2 class="title is-3 has-text-centered">ImageNet-1K Results</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
+        <div id="results-grid" class="results-grid">
+          <figure class="result-figure">
             <img src="static/images/throughput-imagenet-val.png" alt="ThinkingViT ImageNet validation accuracy versus throughput" loading="lazy">
-            <h2 class="subtitle has-text-centered">ThinkingViT improves the accuracy-throughput tradeoff over nested baselines.</h2>
-          </div>
-          <div class="item">
+            <figcaption>ThinkingViT improves the accuracy-throughput tradeoff over nested baselines.</figcaption>
+          </figure>
+          <figure class="result-figure">
             <img src="static/images/gmacs-imagenet-val.png" alt="ThinkingViT ImageNet validation accuracy versus GMACs" loading="lazy">
-            <h2 class="subtitle has-text-centered">Threshold-controlled early exits expose multiple compute budgets from the same model.</h2>
-          </div>
-          <div class="item">
+            <figcaption>Threshold-controlled early exits expose multiple compute budgets from the same model.</figcaption>
+          </figure>
+          <figure class="result-figure">
             <img src="static/images/swin-accuracy-vs-gmacs.png" alt="ThinkingViT-Swin accuracy versus GMACs" loading="lazy">
-            <h2 class="subtitle has-text-centered">The progressive thinking mechanism transfers to Swin-S.</h2>
-          </div>
+            <figcaption>The progressive thinking mechanism transfers to Swin-S.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
