@@ -251,33 +251,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Elastic Inference Setup</h2>
-        <div class="setup-grid">
-          <article class="setup-item">
-            <span class="setup-kicker">DeiT schedule</span>
-            <h3>3H -&gt; 6H</h3>
-            <p>The first stage uses three attention heads. Samples with high uncertainty continue to the six-head stage.</p>
-          </article>
-          <article class="setup-item">
-            <span class="setup-kicker">Swin-S rounds</span>
-            <h3>(3, 3, 6, 12) -&gt; (3, 6, 12, 24)</h3>
-            <p>The first round keeps full capacity in the earliest Swin stage and halves the later stages before falling back to full Swin-S capacity.</p>
-          </article>
-          <article class="setup-item">
-            <span class="setup-kicker">Exit control</span>
-            <h3>Entropy threshold</h3>
-            <p>Lower thresholds route more images to later stages for higher accuracy. Higher thresholds exit earlier and reduce GMACs.</p>
-          </article>
-          <article class="setup-item">
-            <span class="setup-kicker">Upgrade path</span>
-            <h3>Backbone preserving</h3>
-            <p>The model keeps the original ViT or Swin backbone structure while exposing multiple compute operating points from one checkpoint.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section class="section">
       <div class="container">
@@ -301,24 +274,6 @@
 
 
 
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Repository Contents</h2>
-        <div class="file-grid">
-          <span><code>train.py</code> ImageNet training entry point</span>
-          <span><code>validate.py</code> ImageNet threshold evaluation</span>
-          <span><code>args.yaml</code> DeiT-style training recipe</span>
-          <span><code>train_swin.py</code> Swin-S training entry point</span>
-          <span><code>validate_swin.py</code> Swin threshold evaluation</span>
-          <span><code>distributed_train.sh</code> torchrun launcher for DeiT experiments</span>
-          <span><code>job_train_swin.sh</code> Slurm launcher for Swin training</span>
-          <span><code>job_eval_swin.sh</code> Slurm threshold sweep for Swin evaluation</span>
-          <span><code>calc_swin_gmacs.py</code> Swin GMAC calculator</span>
-          <span><code>timm/models/vision_transformer.py</code> ThinkingViT implementation</span>
-          <span><code>timm/models/swin_transformer.py</code> ThinkingViT-Swin implementation</span>
-        </div>
-      </div>
-    </section>
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
