@@ -1,80 +1,54 @@
-# Academic Project Page Template
+# ThinkingViT Project Page
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+This repository contains the GitHub Pages website for:
 
-A clean, responsive template for academic project pages.
+**ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference**
+CVPR 2026 Main Track Poster
 
+Authors: Ali Hojjat, Janek Haberer, Soren Pirk, Olaf Landsiedel
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+## Links
 
+- Project page: https://ds-kiel.github.io/ThinkingViT-project-page/
+- Paper: https://arxiv.org/abs/2507.10800
+- Code: https://github.com/ds-kiel/ThinkingViT
+- Model weights: https://zenodo.org/records/20207165
 
+## Local Preview
 
-## Start using the template
-To start using the template click on `Use this Template`.
+From this directory:
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+```bash
+python3 -m http.server 8000
+```
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+Then open:
 
-## What's New
+```text
+http://localhost:8000
+```
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+## Deploy
 
-## Components
+This repo is intended to be deployed with GitHub Pages from:
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+```text
+Branch: main
+Folder: / root
+```
 
-## Customization
+After editing the page:
 
-The HTML file has TODO comments showing what to replace:
+```bash
+git add .
+git commit -m "Update ThinkingViT project page"
+git push origin main
+```
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+## Template Credit
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+This website is based on the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template), which itself was adapted from the [Nerfies](https://nerfies.github.io/) project page. The footer keeps the requested template attribution.
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+## License
 
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
-
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+The webpage template source follows the original template license, Creative Commons Attribution-ShareAlike 4.0 International License.

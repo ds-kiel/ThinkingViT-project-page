@@ -3,230 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
+  <meta name="description" content="ThinkingViT is a nested Vision Transformer that dynamically allocates attention heads and computation through progressive thinking stages.">
+  <meta name="keywords" content="ThinkingViT, Vision Transformer, elastic inference, Matryoshka networks, computer vision, ImageNet, CVPR 2026">
+  <meta name="author" content="Ali Hojjat, Janek Haberer, Soren Pirk, Olaf Landsiedel">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:site_name" content="ThinkingViT Project Page">
+  <meta property="og:title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
+  <meta property="og:description" content="A CVPR 2026 project on elastic Vision Transformer inference with progressive thinking stages and token recycling.">
+  <meta property="og:url" content="https://ds-kiel.github.io/ThinkingViT-project-page/">
+  <meta property="og:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-demo.png">
+  <meta property="og:image:alt" content="ThinkingViT method overview">
+  <meta property="article:published_time" content="2026-03-26T17:14:32.000Z">
+  <meta property="article:author" content="Ali Hojjat">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Vision Transformers">
+  <meta property="article:tag" content="Elastic Inference">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
+  <meta name="twitter:description" content="Progressive thinking stages let ViTs spend more compute only on difficult inputs.">
+  <meta name="twitter:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-demo.png">
+  <meta name="twitter:image:alt" content="ThinkingViT method overview">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="citation_title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
+  <meta name="citation_author" content="Hojjat, Ali">
+  <meta name="citation_author" content="Haberer, Janek">
+  <meta name="citation_author" content="Pirk, Soren">
+  <meta name="citation_author" content="Landsiedel, Olaf">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CVPR">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2507.10800">
+
+  <meta name="theme-color" content="#1f6f63">
+  <meta name="msapplication-TileColor" content="#1f6f63">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>ThinkingViT - Matryoshka Thinking Vision Transformer</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference",
+    "description": "ThinkingViT is a nested Vision Transformer architecture that dynamically adjusts inference computation with progressive thinking stages and token recycling.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Ali Hojjat"},
+      {"@type": "Person", "name": "Janek Haberer"},
+      {"@type": "Person", "name": "Soren Pirk"},
+      {"@type": "Person", "name": "Olaf Landsiedel"}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026-03-26",
+    "publisher": {"@type": "Organization", "name": "CVPR"},
+    "url": "https://ds-kiel.github.io/ThinkingViT-project-page/",
+    "image": "https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-demo.png",
+    "keywords": ["Vision Transformer", "Elastic Inference", "Matryoshka networks", "Computer Vision", "ImageNet"],
+    "abstract": "ThinkingViT uses progressive thinking stages to allocate more attention heads and computation only when an input remains uncertain. Token Recycling conditions later inference stages on earlier embeddings, improving the accuracy-compute tradeoff.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "sameAs": ["https://arxiv.org/abs/2507.10800", "https://github.com/ds-kiel/ThinkingViT"]
   }
   </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
   <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Project links">
+      <i class="fas fa-link"></i>
+      Links
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
+        <h4>Project Links</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close project links">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+        <a href="https://arxiv.org/abs/2507.10800" class="work-item" target="_blank" rel="noopener">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
+            <h5>arXiv Paper</h5>
+            <p>Accepted at CVPR 2026.</p>
+            <span class="work-venue">arXiv:2507.10800</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+        <a href="https://github.com/ds-kiel/ThinkingViT" class="work-item" target="_blank" rel="noopener">
           <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>Source Code</h5>
+            <p>Training, evaluation, checkpoints, and scripts.</p>
+            <span class="work-venue">GitHub</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+        <a href="https://zenodo.org/records/20207165" class="work-item" target="_blank" rel="noopener">
           <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>Model Weights</h5>
+            <p>Released ThinkingViT checkpoints.</p>
+            <span class="work-venue">Zenodo</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>Page Template</h5>
+            <p>Original academic project page template.</p>
+            <span class="work-venue">Template credit</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -235,286 +153,298 @@
   </div>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <p class="publication-venue">CVPR 2026 Main Track Poster</p>
+              <h1 class="title is-1 publication-title">ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://arxiv.org/search/cs?searchtype=author&query=Hojjat,+A" target="_blank" rel="noopener">Ali Hojjat</a>,</span>
+                <span class="author-block"><a href="https://arxiv.org/search/cs?searchtype=author&query=Haberer,+J" target="_blank" rel="noopener">Janek Haberer</a>,</span>
+                <span class="author-block"><a href="https://arxiv.org/search/cs?searchtype=author&query=Pirk,+S" target="_blank" rel="noopener">Soren Pirk</a>,</span>
+                <span class="author-block"><a href="https://arxiv.org/search/cs?searchtype=author&query=Landsiedel,+O" target="_blank" rel="noopener">Olaf Landsiedel</a></span>
+              </div>
+              <p class="hero-summary">
+                A nested Vision Transformer that spends computation adaptively: easy inputs exit early, difficult inputs activate more attention heads and reuse earlier token embeddings.
+              </p>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2507.10800" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2507.10800" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/ds-kiel/ThinkingViT" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://zenodo.org/records/20207165" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Weights</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="section teaser-section">
+      <div class="container is-max-desktop">
+        <figure class="main-figure">
+          <img src="static/images/thinkingvit-demo.png" alt="ThinkingViT progressive thinking stages and token recycling overview" loading="eager">
+        </figure>
+        <p class="figure-caption">
+          ThinkingViT begins with a small subset of attention heads and progressively activates larger subsets only when prediction uncertainty remains high. Token Recycling carries previous-stage embeddings into later stages.
+        </p>
+      </div>
+    </section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Vision Transformers deliver state-of-the-art performance, yet their fixed computational budget prevents scalable deployment across heterogeneous hardware. Recent Matryoshka-style Transformer architectures mitigate this by embedding nested subnetworks within a single model to enable scalable inference. However, these models allocate the same amount of compute to all inputs, regardless of their complexity, which leads to inefficiencies.
+              </p>
+              <p>
+                ThinkingViT introduces progressive thinking stages that dynamically adjust inference computation based on input difficulty. It first activates a small subset of the most important attention heads and exits early when predictions are sufficiently certain. Otherwise, it activates additional attention heads and re-evaluates the input. Token Recycling conditions each subsequent stage on embeddings from the previous stage, enabling progressive improvement while preserving the backbone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Highlights</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-value">+2.0 p.p.</span>
+            <span class="stat-label">accuracy at the same throughput versus nested baselines</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">+2.9 p.p.</span>
+            <span class="stat-label">accuracy at equal GMACs on ImageNet-1K</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">3H -&gt; 6H</span>
+            <span class="stat-label">DeiT-style ThinkingViT schedule for elastic inference</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">Swin-S</span>
+            <span class="stat-label">the same idea transfers to Swin Transformers</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="method-grid">
+          <article class="method-item">
+            <h3>Progressive Thinking Stages</h3>
+            <p>Inference starts with a smaller attention-head budget. If confidence is high enough, the sample exits early; otherwise, ThinkingViT activates a larger head subset and performs another stage.</p>
+          </article>
+          <article class="method-item">
+            <h3>Token Recycling</h3>
+            <p>Later stages are not independent reruns. They are conditioned on embeddings from previous stages, helping the model refine predictions while preserving the ViT backbone.</p>
+          </article>
+          <article class="method-item">
+            <h3>Backbone-Preserving Upgrade</h3>
+            <p>The design works as a plugin-style upgrade for vanilla ViT and extends to Swin Transformers, giving one model multiple accuracy-compute operating points.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">ImageNet-1K Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/throughput-imagenet-val.png" alt="ThinkingViT ImageNet validation accuracy versus throughput" loading="lazy">
+            <h2 class="subtitle has-text-centered">ThinkingViT improves the accuracy-throughput tradeoff over nested baselines.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/gmacs-imagenet-val.png" alt="ThinkingViT ImageNet validation accuracy versus GMACs" loading="lazy">
+            <h2 class="subtitle has-text-centered">Threshold-controlled early exits expose multiple compute budgets from the same model.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/swin-accuracy-vs-gmacs.png" alt="ThinkingViT-Swin accuracy versus GMACs" loading="lazy">
+            <h2 class="subtitle has-text-centered">The progressive thinking mechanism transfers to Swin-S.</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns">
+          <div class="column">
+            <h2 class="title is-4">ThinkingViT 3H -&gt; 6H</h2>
+            <div class="table-container">
+              <table class="table is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>Threshold</th>
+                    <th>Acc@1 (%)</th>
+                    <th>GMACs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>0.0</td><td>81.440</td><td>5.850</td></tr>
+                  <tr><td>0.5</td><td>81.368</td><td>3.977</td></tr>
+                  <tr><td>1.0</td><td>80.310</td><td>2.907</td></tr>
+                  <tr><td>1.6</td><td>77.292</td><td>1.944</td></tr>
+                  <tr><td>2.0</td><td>74.712</td><td>1.441</td></tr>
+                  <tr><td>5.0</td><td>73.536</td><td>1.250</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="column">
+            <h2 class="title is-4">ThinkingViT-Swin / Swin-S</h2>
+            <div class="table-container">
+              <table class="table is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>Threshold</th>
+                    <th>Acc@1 (%)</th>
+                    <th>GMACs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>0.0</td><td>83.516</td><td>11.68</td></tr>
+                  <tr><td>0.5</td><td>83.386</td><td>6.76</td></tr>
+                  <tr><td>1.0</td><td>82.124</td><td>4.88</td></tr>
+                  <tr><td>1.6</td><td>79.746</td><td>3.53</td></tr>
+                  <tr><td>2.0</td><td>78.410</td><td>2.97</td></tr>
+                  <tr><td>5.0</td><td>77.990</td><td>2.82</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="table-note">Lower thresholds send more samples to later stages and improve accuracy at higher compute. Higher thresholds exit earlier and reduce GMACs.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Using the Code</h2>
+        <div class="code-grid">
+          <article>
+            <h3>Install</h3>
+            <pre><code>python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt</code></pre>
+          </article>
+          <article>
+            <h3>Evaluate DeiT ThinkingViT</h3>
+            <pre><code>python validate.py \
+  --model thinkingvit \
+  --checkpoint /path/to/thinkingvit_checkpoint.pth.tar \
+  --data-dir /path/to/ILSVRC2012/ \
+  --batch-size 512 \
+  --use-ema \
+  --thinking_stages 3 6 \
+  --threshold 1.0</code></pre>
+          </article>
+          <article>
+            <h3>Evaluate Swin ThinkingViT</h3>
+            <pre><code>python validate_swin.py \
+  --model swin_small_patch4_window7_224 \
+  --checkpoint /path/to/ThinkingViTSwin.pth.tar \
+  --data-dir /path/to/ILSVRC2012/ \
+  --batch-size 128 \
+  --use-ema \
+  --head-round-1 3 3 6 12 \
+  --head-round-2 3 6 12 24 \
+  --threshold 1.0</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Repository Contents</h2>
+        <div class="file-grid">
+          <span><code>train.py</code> ImageNet training entry point</span>
+          <span><code>validate.py</code> ImageNet threshold evaluation</span>
+          <span><code>args.yaml</code> DeiT-style training recipe</span>
+          <span><code>train_swin.py</code> Swin-S training entry point</span>
+          <span><code>validate_swin.py</code> Swin threshold evaluation</span>
+          <span><code>calc_swin_gmacs.py</code> Swin GMAC calculator</span>
+          <span><code>timm/models/vision_transformer.py</code> ThinkingViT implementation</span>
+          <span><code>timm/models/swin_transformer.py</code> ThinkingViT-Swin implementation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{hojjat2026thinkingvit,
+  title={ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference},
+  author={Hojjat, Ali and Haberer, Janek and Pirk, Soren and Landsiedel, Olaf},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026},
+  url={https://arxiv.org/abs/2507.10800}
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            The code builds on <a href="https://github.com/huggingface/pytorch-image-models" target="_blank" rel="noopener">pytorch-image-models (timm)</a> and draws inspiration from the <a href="https://github.com/ds-kiel/HydraViT" target="_blank" rel="noopener">HydraViT</a> repository. We thank the timm maintainers, DeiT authors, and HydraViT authors for their open-source implementations.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+  </main>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
+  <footer class="footer">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, which was adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+            </p>
+            <p>
+              The website source follows the template credit request and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
