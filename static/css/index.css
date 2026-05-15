@@ -118,7 +118,7 @@ body {
     font-family: 'Inter', sans-serif !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
     line-height: 1.1 !important;
 }
 
@@ -184,14 +184,28 @@ body {
 }
 
 .publication-venue {
-    color: var(--text-secondary);
+    align-items: center;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgb(185 28 28 / 0.08);
+    color: #b91c1c;
+    display: inline-flex;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 0 auto 1.6rem;
+    padding: 0.55rem 1.1rem;
     width: fit-content;
-    font-weight: 600;
-    background: var(--background-accent);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
-    display: inline-block;
+}
+
+.publication-venue::before {
+    background: #dc2626;
+    border-radius: 50%;
+    content: '';
+    height: 0.48rem;
+    margin-right: 0.55rem;
+    width: 0.48rem;
 }
 
 .publication-awards {
