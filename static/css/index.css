@@ -815,6 +815,7 @@ a:focus {
 
 .stats-grid,
 .method-grid,
+.setup-grid,
 .code-grid,
 .file-grid {
   display: grid;
@@ -827,6 +828,7 @@ a:focus {
 
 .stat-card,
 .method-item,
+.setup-item,
 .code-grid article,
 .file-grid span {
   background: #ffffff;
@@ -860,12 +862,18 @@ a:focus {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.setup-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .method-item,
+.setup-item,
 .code-grid article {
   padding: 1.25rem;
 }
 
 .method-item h3,
+.setup-item h3,
 .code-grid h3 {
   color: var(--text-primary);
   font-size: 1.1rem;
@@ -873,7 +881,18 @@ a:focus {
   margin: 0 0 0.75rem;
 }
 
-.method-item p {
+.setup-kicker {
+  color: var(--accent-color);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.method-item p,
+.setup-item p {
   color: var(--text-secondary);
   line-height: 1.65;
 }
@@ -947,7 +966,8 @@ a:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .method-grid {
+  .method-grid,
+  .setup-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -958,6 +978,7 @@ a:focus {
   }
 
   .stats-grid,
+  .setup-grid,
   .file-grid {
     grid-template-columns: 1fr;
   }
