@@ -151,6 +151,38 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.publication-authors sup {
+    color: var(--text-secondary);
+    font-size: 0.72em;
+    font-weight: 700;
+    margin-left: 0.12rem;
+}
+
+.publication-affiliations,
+.publication-contact {
+    color: var(--text-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.98rem;
+    gap: 0.35rem 1rem;
+    justify-content: center;
+    line-height: 1.45;
+    margin: 0 auto 0.6rem;
+    max-width: 900px;
+}
+
+.publication-affiliations sup {
+    font-size: 0.72em;
+    font-weight: 700;
+    margin-right: 0.12rem;
+}
+
+.publication-contact {
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1.4rem;
+}
+
 .publication-venue {
     color: var(--text-secondary);
     width: fit-content;
