@@ -228,12 +228,24 @@
     </section>
 
     <section class="section teaser-section">
-      <div class="container is-max-desktop">
-        <figure class="main-figure">
-          <img src="static/images/demo.png" alt="ThinkingViT progressive thinking stages and token recycling overview" loading="eager">
+      <div class="container teaser-container">
+        <figure class="main-figure video-figure">
+          <video id="thinkingvit-demo-video" class="demo-video" preload="metadata" playsinline muted>
+            <source src="static/videos/thinkingvit.mov" type="video/quicktime">
+            Your browser does not support embedded video.
+          </video>
+          <div class="video-scrubber" aria-label="ThinkingViT animation timeline">
+            <button class="video-toggle" type="button" data-video-toggle aria-label="Play animation">
+              <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+              <span class="pause-icon" aria-hidden="true"><i class="fas fa-pause"></i></span>
+            </button>
+            <span class="video-time" data-current-time>0:00</span>
+            <input class="video-range" type="range" min="0" max="1000" value="0" step="1" data-video-scrubber aria-label="Animation timeline">
+            <span class="video-time" data-duration>0:00</span>
+          </div>
         </figure>
-        <p class="figure-caption">
-          ThinkingViT begins with a small subset of attention heads and progressively activates larger subsets only when prediction uncertainty remains high. Token Recycling carries previous-stage embeddings into later stages.
+        <p class="figure-caption demo-explanation">
+          <strong>Nested progressive inference with Token Recycling in ThinkingViT.</strong> After embedding the input, ThinkingViT first activates a subset of the model, including the first attention heads, to produce an initial prediction. These heads capture the most important features due to the training procedure. If certainty exceeds a threshold, easy inputs terminate early to save computation. Otherwise, the resulting tokens are fused back into the input through a projection and a learnable scaling factor &alpha;, which controls how much prior knowledge is recycled. The model then thinks more by reprocessing the fused tokens with a larger subset of attention heads for a refined prediction. ThinkingViT enables elastic inference across hardware budgets by adjusting the confidence threshold, and the number of stages and attention-head proportions can be configured for efficiency and accuracy trade-offs.
         </p>
       </div>
     </section>
@@ -276,18 +288,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section demo-movie-section">
-      <div class="container is-max-desktop">
-        <figure class="demo-movie">
-          <img src="static/images/thinkingvit-movie.gif" alt="Looping ThinkingViT inference animation" loading="lazy">
-          <figcaption class="demo-explanation">
-            <strong>Nested progressive inference with Token Recycling in ThinkingViT.</strong> After embedding the input, ThinkingViT first activates a subset of the model, including the first attention heads, to produce an initial prediction. These heads capture the most important features due to the training procedure. If certainty exceeds a threshold, easy inputs terminate early to save computation. Otherwise, the resulting tokens are fused back into the input through a projection and a learnable scaling factor &alpha;, which controls how much prior knowledge is recycled. The model then thinks more by reprocessing the fused tokens with a larger subset of attention heads for a refined prediction. ThinkingViT enables elastic inference across hardware budgets by adjusting the confidence threshold, and the number of stages and attention-head proportions can be configured for efficiency and accuracy trade-offs.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
 
     <section class="section">
       <div class="container">
