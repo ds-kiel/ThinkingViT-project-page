@@ -297,21 +297,15 @@
         </div>
         <div class="paper-figures">
           <figure class="paper-figure">
-            <object class="paper-figure-object paper-figure-entropy" data="static/pdfs/entropy-example.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" aria-label="Visualization of images sorted by first-round entropy">
-              <a href="static/pdfs/entropy-example.pdf">Open entropy visualization figure.</a>
-            </object>
+            <img class="paper-figure-image" src="static/images/confidence.png" alt="Visualization of images sorted by first-round entropy from very confident to not confident" loading="lazy">
             <figcaption><strong>Visualization of images sorted by first-round entropy.</strong> ThinkingViT confidently classifies simple, clear images in one round, while complex cases with occlusion or clutter show higher entropy and trigger a second round.</figcaption>
           </figure>
           <figure class="paper-figure">
-            <object class="paper-figure-object paper-figure-segmentation" data="static/pdfs/thinkingvit-segmentation.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" aria-label="ThinkingViT segmentation after one and two rounds of thinking">
-              <a href="static/pdfs/thinkingvit-segmentation.pdf">Open segmentation figure.</a>
-            </object>
+            <img class="paper-figure-image" src="static/images/segmentation.png" alt="ThinkingViT segmentation after one and two rounds of thinking" loading="lazy">
             <figcaption><strong>ThinkingViT segmentation after one and two rounds of thinking.</strong> Example outputs from the ADE20K dataset. The second round refines object boundaries and improves segmentation quality compared to the first round.</figcaption>
           </figure>
           <figure class="paper-figure">
-            <object class="paper-figure-object paper-figure-distribution" data="static/pdfs/entropy-distribution-comparison.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" aria-label="Entropy distribution after the first inference round across ImageNet validation sets">
-              <a href="static/pdfs/entropy-distribution-comparison.pdf">Open entropy distribution figure.</a>
-            </object>
+            <img class="paper-figure-image" src="static/images/entropy_dist.png" alt="Entropy distribution after the first inference round across ImageNet validation sets" loading="lazy">
             <figcaption><strong>Entropy distribution after the first inference round across ImageNet validation sets.</strong> Simpler datasets like ImageNet-V2 show confident early predictions, while harder ones like ImageNet-A and ImageNet-R show greater uncertainty and trigger another round of thinking.</figcaption>
           </figure>
         </div>
