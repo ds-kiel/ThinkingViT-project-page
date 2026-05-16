@@ -16,7 +16,7 @@
   <meta property="og:title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
   <meta property="og:description" content="A CVPR 2026 project on elastic Vision Transformer inference with progressive thinking stages and token recycling.">
   <meta property="og:url" content="https://ds-kiel.github.io/ThinkingViT-project-page/">
-  <meta property="og:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/demo.png">
+  <meta property="og:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-movie-start.gif">
   <meta property="og:image:alt" content="ThinkingViT method overview">
   <meta property="article:published_time" content="2026-03-26T17:14:32.000Z">
   <meta property="article:author" content="Ali Hojjat">
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
   <meta name="twitter:description" content="Progressive thinking stages let ViTs spend more compute only on difficult inputs.">
-  <meta name="twitter:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/demo.png">
+  <meta name="twitter:image" content="https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-movie-start.gif">
   <meta name="twitter:image:alt" content="ThinkingViT method overview">
 
   <meta name="citation_title" content="ThinkingViT: Matryoshka Thinking Vision Transformer for Elastic Inference">
@@ -86,7 +86,7 @@
     "datePublished": "2026-03-26",
     "publisher": {"@type": "Organization", "name": "CVPR"},
     "url": "https://ds-kiel.github.io/ThinkingViT-project-page/",
-    "image": "https://ds-kiel.github.io/ThinkingViT-project-page/static/images/demo.png",
+    "image": "https://ds-kiel.github.io/ThinkingViT-project-page/static/images/thinkingvit-movie-start.gif",
     "keywords": ["Vision Transformer", "Elastic Inference", "Matryoshka networks", "Computer Vision", "ImageNet"],
     "abstract": "ThinkingViT uses progressive thinking stages to allocate more attention heads and computation only when an input remains uncertain. Token Recycling conditions later inference stages on earlier embeddings, improving the accuracy-compute tradeoff.",
     "isAccessibleForFree": true,
@@ -230,7 +230,7 @@
     <section class="section teaser-section">
       <div class="container teaser-container">
         <figure class="main-figure">
-          <img src="static/images/demo.png" data-delayed-src="static/images/thinkingvit-movie.gif" data-gif-delay="1000" alt="ThinkingViT progressive thinking stages and token recycling animation" loading="eager">
+          <img src="static/images/thinkingvit-movie-start.gif" data-animated-src="static/images/thinkingvit-movie.gif" data-gif-delay="1000" alt="ThinkingViT progressive thinking stages and token recycling animation" loading="eager">
         </figure>
         <p class="figure-caption demo-explanation">
           <strong>Nested progressive inference with Token Recycling in ThinkingViT.</strong> After embedding the input, ThinkingViT first activates a subset of the model, including the first attention heads, to produce an initial prediction. These heads capture the most important features due to the training procedure. If certainty exceeds a threshold, easy inputs terminate early to save computation. Otherwise, the resulting tokens are fused back into the input through a projection and a learnable scaling factor &alpha;, which controls how much prior knowledge is recycled. The model then thinks more by reprocessing the fused tokens with a larger subset of attention heads for a refined prediction. ThinkingViT enables elastic inference across hardware budgets by adjusting the confidence threshold, and the number of stages and attention-head proportions can be configured for efficiency and accuracy trade-offs.

@@ -90,9 +90,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
-function setupDelayedGifs() {
-    document.querySelectorAll('[data-delayed-src]').forEach(function(image) {
-        const source = image.getAttribute('data-delayed-src');
+function setupPausedGifs() {
+    document.querySelectorAll('[data-animated-src]').forEach(function(image) {
+        const source = image.getAttribute('data-animated-src');
         const delay = Number(image.getAttribute('data-gif-delay')) || 1000;
 
         if (!source) {
@@ -101,12 +101,12 @@ function setupDelayedGifs() {
 
         window.setTimeout(function() {
             image.src = source;
-            image.removeAttribute('data-delayed-src');
+            image.removeAttribute('data-animated-src');
         }, delay);
     });
 }
 
-document.addEventListener('DOMContentLoaded', setupDelayedGifs);
+document.addEventListener('DOMContentLoaded', setupPausedGifs);
 
 $(document).ready(function() {
     bulmaSlider.attach();
