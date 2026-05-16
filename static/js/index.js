@@ -91,100 +91,23 @@ window.addEventListener('scroll', function() {
 });
 
 
-function setupThinkingVideoScrubber() {
-    const video = document.getElementById('thinkingvit-demo-video');
-    if (!video) {
-        return;
-    }
+function setupDelayedGifs() {
+    document.querySelectorAll('[data-delayed-src]').forEach(function(image) {
+        const source = image.getAttribute('data-delayed-src');
+        const delay = Number(image.getAttribute('data-gif-delay')) || 1000;
 
-    const figure = video.closest('.video-figure');
-    const scrubber = figure ? figure.querySelector('[data-video-scrubber]') : null;
-    const toggle = figure ? figure.querySelector('[data-video-toggle]') : null;
-    const currentTime = figure ? figure.querySelector('[data-current-time]') : null;
-    const durationTime = figure ? figure.querySelector('[data-duration]') : null;
-
-    if (!scrubber || !toggle || !currentTime || !durationTime) {
-        return;
-    }
-
-    let isScrubbing = false;
-
-    function formatTime(seconds) {
-        const safeSeconds = Number.isFinite(seconds) ? Math.max(0, seconds) : 0;
-        const minutes = Math.floor(safeSeconds / 60);
-        const remainingSeconds = Math.floor(safeSeconds % 60).toString().padStart(2, '0');
-        return minutes + ':' + remainingSeconds;
-    }
-
-    function syncDuration() {
-        const duration = Number.isFinite(video.duration) ? video.duration : 0;
-        scrubber.max = Math.max(1, Math.round(duration * 1000));
-        durationTime.textContent = formatTime(duration);
-        scrubber.disabled = false;
-        toggle.disabled = false;
-        syncProgress();
-    }
-
-    function syncProgress() {
-        if (!isScrubbing) {
-            scrubber.value = Math.round(video.currentTime * 1000);
+        if (!source) {
+            return;
         }
-        currentTime.textContent = formatTime(video.currentTime);
-    }
 
-    function syncToggle() {
-        const isPlaying = !video.paused && !video.ended;
-        toggle.classList.toggle('is-playing', isPlaying);
-        toggle.setAttribute('aria-label', isPlaying ? 'Pause animation' : 'Play animation');
-    }
-
-    scrubber.disabled = true;
-    toggle.disabled = true;
-
-    toggle.addEventListener('click', function() {
-        if (video.paused || video.ended) {
-            video.play().catch(function(error) {
-                console.warn('Video playback failed:', error);
-            });
-        } else {
-            video.pause();
-        }
+        window.setTimeout(function() {
+            image.src = source;
+            image.removeAttribute('data-delayed-src');
+        }, delay);
     });
-
-    scrubber.addEventListener('input', function() {
-        isScrubbing = true;
-        video.currentTime = Number(scrubber.value) / 1000;
-        syncProgress();
-    });
-
-    scrubber.addEventListener('change', function() {
-        isScrubbing = false;
-        syncProgress();
-    });
-
-    scrubber.addEventListener('pointerdown', function() {
-        isScrubbing = true;
-    });
-
-    scrubber.addEventListener('pointerup', function() {
-        isScrubbing = false;
-        syncProgress();
-    });
-
-    video.addEventListener('loadedmetadata', syncDuration);
-    video.addEventListener('durationchange', syncDuration);
-    video.addEventListener('timeupdate', syncProgress);
-    video.addEventListener('play', syncToggle);
-    video.addEventListener('pause', syncToggle);
-    video.addEventListener('ended', syncToggle);
-
-    if (video.readyState >= 1) {
-        syncDuration();
-    }
-    syncToggle();
 }
 
-document.addEventListener('DOMContentLoaded', setupThinkingVideoScrubber);
+document.addEventListener('DOMContentLoaded', setupDelayedGifs);
 
 $(document).ready(function() {
     bulmaSlider.attach();
