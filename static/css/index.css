@@ -944,6 +944,19 @@ a:focus {
   text-align: center;
 }
 
+.demo-explanation {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem auto 0;
+  max-width: 900px;
+  text-align: left;
+}
+
+.demo-explanation strong {
+  color: var(--text-primary);
+}
+
 .stats-grid,
 .method-grid,
 .setup-grid,
