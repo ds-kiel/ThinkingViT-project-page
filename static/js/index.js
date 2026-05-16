@@ -90,6 +90,24 @@ window.addEventListener('scroll', function() {
     }
 });
 
+function setupDelayedGifs() {
+    document.querySelectorAll('[data-delayed-src]').forEach(function(image) {
+        const source = image.getAttribute('data-delayed-src');
+        const delay = Number(image.getAttribute('data-gif-delay')) || 1000;
+
+        if (!source) {
+            return;
+        }
+
+        window.setTimeout(function() {
+            image.src = source;
+            image.removeAttribute('data-delayed-src');
+        }, delay);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupDelayedGifs);
+
 $(document).ready(function() {
     bulmaSlider.attach();
 })
