@@ -344,9 +344,9 @@ body {
 
 .paper-figures {
   display: grid;
-  gap: 1rem;
-  margin: 1.5rem auto 0;
-  max-width: 980px;
+  gap: 0.85rem;
+  margin: 1.25rem auto 0;
+  max-width: 720px;
 }
 
 .paper-figure {
@@ -359,7 +359,7 @@ body {
   flex-direction: column;
   margin: 0;
   overflow: hidden;
-  padding: 0.75rem;
+  padding: 0.55rem;
 }
 
 .paper-figure-image {
@@ -368,15 +368,15 @@ body {
   display: block;
   height: auto;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 680px;
   width: 100%;
 }
 
 .paper-figure figcaption {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.55;
-  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-top: 0.6rem;
   text-align: center;
 }
 
