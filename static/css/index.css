@@ -968,19 +968,15 @@ a:focus {
   padding: 0.55rem;
 }
 
-.demo-movie video {
+.demo-movie img {
   border-radius: calc(var(--border-radius) - 2px);
   display: block;
   height: auto;
   width: 100%;
 }
 
-.demo-movie figcaption {
-  color: var(--text-secondary);
-  font-size: 0.88rem;
-  line-height: 1.45;
-  margin-top: 0.55rem;
-  text-align: center;
+.demo-movie .demo-explanation {
+  margin-top: 0.8rem;
 }
 
 .stats-grid,
