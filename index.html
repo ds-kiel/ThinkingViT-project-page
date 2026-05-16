@@ -238,6 +238,12 @@
         <p class="demo-explanation">
           <strong>Nested progressive inference with Token Recycling in ThinkingViT.</strong> After embedding the input, ThinkingViT first activates a subset of the model, including the first attention heads, to produce an initial prediction. These heads capture the most important features due to the training procedure. If certainty exceeds a threshold, easy inputs terminate early to save computation. Otherwise, the resulting tokens are fused back into the input through a projection and a learnable scaling factor &alpha;, which controls how much prior knowledge is recycled. The model then thinks more by reprocessing the fused tokens with a larger subset of attention heads for a refined prediction. ThinkingViT enables elastic inference across hardware budgets by adjusting the confidence threshold, and the number of stages and attention-head proportions can be configured for efficiency and accuracy trade-offs.
         </p>
+        <figure class="demo-movie">
+          <video autoplay muted loop playsinline preload="metadata" poster="static/images/demo.png" aria-label="Looping ThinkingViT inference animation">
+            <source src="static/images/movie.mov" type="video/quicktime">
+          </video>
+          <figcaption>Looping ThinkingViT inference animation.</figcaption>
+        </figure>
       </div>
     </section>
 

@@ -957,6 +957,32 @@ a:focus {
   color: var(--text-primary);
 }
 
+.demo-movie {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin: 1.25rem auto 0;
+  max-width: 720px;
+  overflow: hidden;
+  padding: 0.55rem;
+}
+
+.demo-movie video {
+  border-radius: calc(var(--border-radius) - 2px);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.demo-movie figcaption {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-top: 0.55rem;
+  text-align: center;
+}
+
 .stats-grid,
 .method-grid,
 .setup-grid,
